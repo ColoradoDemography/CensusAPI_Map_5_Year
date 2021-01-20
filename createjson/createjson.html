@@ -1,0 +1,60 @@
+<html>
+  <head>
+    <title>JSON Generator</title>
+  </head>
+  <body>
+
+    <script src="http://code.jquery.com/jquery-1.10.2.min.js"></script>
+    <script src="http://d3js.org/d3.v3.min.js" charset="utf-8"></script>
+    <script src="../assets/js/simple_statistics.js"></script>
+              
+      <style>
+      </style>
+
+    <table>
+    <tr><td><b>varcode </b></td><td>(ex: mhi):&nbsp;&nbsp;</td><td><input id="varcode" type="text"/></td></tr>
+    <tr><td><b>verbose </b></td><td>(ex: Median Household Income):&nbsp;&nbsp;</td><td><input id="verbose" type="text"/></td></tr>
+    <tr><td><b>section </b></td><td>(ex: income):&nbsp;&nbsp;</td><td><input id="section" type="text"/></td></tr>
+    <tr><td><b>table </b></td><td>(ex: b19013):&nbsp;&nbsp;</td><td><input id="table" type="text"/></td></tr>
+    <tr><td><b>numerator </b></td><td>(ex: b19013001):&nbsp;&nbsp;</td><td><input id="numerator" type="text"/></td></tr>
+    <tr><td><b>denominator </b></td><td>(ex: 1):&nbsp;&nbsp;</td><td><input id="denominator" value="1" type="text"/></td></tr>
+    <tr><td><b>type </b></td><td>(ex: currency, number, percent, regular):&nbsp;&nbsp;</td><td><input id="type" value="number" type="text"/></td></tr>  
+    <tr><td><b>minval </b></td><td>(ex: 1939):&nbsp;&nbsp;</td><td><input id="minval" value="0" type="text"/></td></tr>
+    <tr><td><b>mininc </b></td><td>(ex: .0001):&nbsp;&nbsp;</td><td><input id="mininc" value="1" type="text"/></td></tr>
+    <tr><td><b>use zero as null </b></td><td>(ex: no):&nbsp;&nbsp;</td><td><input id="usezeroasnull" value="no" type="text"/></td></tr>
+    <tr><td><b>favtable</b></td><td>(Median Household Income)*:&nbsp;&nbsp;</td><td><input id="favtable" value="" type="text"/></td></tr>
+    <tr><td><b>favstyle</b></td><td>(jenks,7,mh1):&nbsp;&nbsp;</td><td><input id="favstyle" value="jenks,7,mh1" type="text"/></td></tr>      
+    </table>
+    <p>*See table alias in tableflavor.js</p><br />
+    <p>See console for output</p>
+    <input type="button" value="submit" onclick="btnclick();"/>
+      
+    <script>
+      
+        var geo="state";
+      var outputtext="";
+        
+        function btnclick(){
+          
+          var displaynum=$("#numerator").val().replace(/\+/g,')+Number(fp.');
+          var displaydenom=$("#denominator").val().replace(/\+/g,')+Number(fp.');   
+          
+          displaynum = 'fp.' + displaynum;
+          displaydenom = 'fp.' + displaydenom;
+          
+          if(displaydenom=='fp.1'){displaydenom='1';}
+          
+          outputtext='{ "varcode": "' + $("#varcode").val() + '", "verbose": "' + $("#verbose").val() + '", "section": "' + $("#section").val() + '", "table": "' + $("#table").val() + '", "numerator": "' + displaynum + '",  "denominator": "' + displaydenom + '", "type": "' + $("#type").val() + '",  "minval": "' + $("#minval").val() + '",  "mininc": "' + $("#mininc").val() + '",  "usezeroasnull": "' + $("#usezeroasnull").val() + '",  "favtable": "' + $("#favtable").val() + '",  "favstyle": "' + $("#favstyle").val() + '"}';
+          
+          console.log(outputtext);
+        }
+      
+
+     
+
+
+
+    </script>
+
+  </body>
+</html>
