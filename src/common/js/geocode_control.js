@@ -28,7 +28,7 @@ module.exports = function(cMap) {
     }
 
     //google geocoder
-    cMap.map.addControl(new L.Control.Search({
+    /*cMap.map.addControl(new L.Control.Search({
         callData: googleGeocoding,
         filterJSON: filterJSONCall,
         markerLocation: false,
@@ -36,7 +36,7 @@ module.exports = function(cMap) {
         autoCollapse: false,
         minLength: 4,
         position: 'topright'
-    }));
+    }));*/
 
 
 }
