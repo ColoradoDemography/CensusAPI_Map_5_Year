@@ -98,7 +98,7 @@ module.exports = {
             "bg": "yes"
         },
         
-        {
+        /* {
             "varcode": "pctpoc",
             "verbose": "Percent People of Color",
             "section": "Race",
@@ -112,7 +112,7 @@ module.exports = {
             "favtable": "Race-Ethnicity (percent)",
             "favstyle": "jenks,7,mh8",
             "bg": "yes"
-        },
+        }, */
 
         {
             "varcode": "pctw",
