@@ -98,21 +98,21 @@ module.exports = {
             "bg": "yes"
         },
         
-        /* {
+        {
             "varcode": "pctpoc",
             "verbose": "Percent People of Color",
             "section": "Race",
             "table": "b03002",
-            "numerator": "fp.b03002001-fp.b03002003",
+            "numerator": "Number(fp.b03002012)+Number(fp.b03002004)+Number(fp.b03002005)+Number(fp.b03002006)+Number(fp.b03002007)+Number(fp.b03002008)+Number(fp.b03002009)",
             "denominator": "fp.b03002001",
             "type": "percent",
             "minval": "0",
             "mininc": "0.01",
-            "usezeroasnull": "yes",
+            "usezeroasnull": "no",
             "favtable": "Race-Ethnicity (percent)",
             "favstyle": "jenks,7,mh8",
             "bg": "yes"
-        }, */
+        },
 
         {
             "varcode": "pctw",
