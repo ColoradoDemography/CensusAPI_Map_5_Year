@@ -97,20 +97,20 @@ module.exports = {
             "favstyle": "jenks,7,mh7",
             "bg": "yes"
         },
-
+        
         {
-            "varcode": "pcth",
-            "verbose": "Percent Hispanic",
+            "varcode": "pctpoc",
+            "verbose": "Percent People of Color",
             "section": "Race",
             "table": "b03002",
-            "numerator": "fp.b03002012",
-            "denominator": "fp.b03002001",
+            "numerator": "Number(fp.b03002001)-Number(fp.b03002003)",
+            "denominator": "Number(fp.b03002001)",
             "type": "percent",
             "minval": "0",
-            "mininc": ".01",
+            "mininc": "0.01",
             "usezeroasnull": "no",
             "favtable": "Race-Ethnicity (percent)",
-            "favstyle": "jenks,7,mh6",
+            "favstyle": "jenks,7,mh8",
             "bg": "yes"
         },
 
@@ -127,6 +127,22 @@ module.exports = {
             "usezeroasnull": "no",
             "favtable": "Race-Ethnicity (percent)",
             "favstyle": "jenks,7,mh8",
+            "bg": "yes"
+        },
+
+        {
+            "varcode": "pcth",
+            "verbose": "Percent Hispanic",
+            "section": "Race",
+            "table": "b03002",
+            "numerator": "fp.b03002012",
+            "denominator": "fp.b03002001",
+            "type": "percent",
+            "minval": "0",
+            "mininc": ".01",
+            "usezeroasnull": "no",
+            "favtable": "Race-Ethnicity (percent)",
+            "favstyle": "jenks,7,mh6",
             "bg": "yes"
         },
 
@@ -1185,6 +1201,7 @@ module.exports = {
             "favstyle": "jenks,7,mh10",
             "bg": "yes"
         },
+
         {
             "varcode": "cbhm",
             "verbose": "Cost Burdened Households (with a Mortgage)",
@@ -1200,6 +1217,53 @@ module.exports = {
             "favstyle": "jenks,7,mh10",
             "bg": "yes"
         },
+        {
+            "varcode": "ecbhm",
+            "verbose": "Extremely Cost Burdened Households (with a Mortgage)",
+            "section": "Housing",
+            "table": "b25091",
+            "numerator": "Number(fp.b25091011)",
+            "denominator": "Number(fp.b25091002)",
+            "type": "percent",
+            "minval": "0",
+            "mininc": ".01",
+            "usezeroasnull": "no",
+            "favtable": "Extremely Cost Burdened Households (with a Mortgage)",
+            "favstyle": "jenks,7,mh10",
+            "bg": "yes"
+        },
+
+        {
+            "varcode": "cbrh",
+            "verbose": "Cost Burdened Rental Households",
+            "section": "Housing",
+            "table": "b25070",
+            "numerator": "Number(fp.b25070007)+Number(fp.b25070008)+Number(fp.b25070009)+Number(fp.b25070010)",
+            "denominator": "Number(fp.b25070001)",
+            "type": "percent",
+            "minval": "0",
+            "mininc": ".01",
+            "usezeroasnull": "no",
+            "favtable": "Cost Burdened Rental Households",
+            "favstyle": "jenks,7,mh10",
+            "bg": "yes"
+        },
+        {
+            "varcode": "ecbrh",
+            "verbose": "Extremely Cost Burdened Rental Households",
+            "section": "Housing",
+            "table": "b25070",
+            "numerator": "Number(fp.b25070010)",
+            "denominator": "Number(fp.b25070001)",
+            "type": "percent",
+            "minval": "0",
+            "mininc": ".01",
+            "usezeroasnull": "no",
+            "favtable": "Extremely Cost Burdened Rental Households",
+            "favstyle": "jenks,7,mh10",
+            "bg": "yes"
+        },
+
         {
             "varcode": "elvw",
             "verbose": "Population 5 and Over That Speaks English Less Than Very Well",

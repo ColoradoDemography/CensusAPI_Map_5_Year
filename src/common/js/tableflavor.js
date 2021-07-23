@@ -85,6 +85,11 @@ module.exports = {
                     "type": "percent",
                     "sum": "none"
                 }, {
+                    "FieldName": "Percent People of Color",
+                    "Formula": "(((Number(fp.b03002001)-Number(fp.b03002003))/Number(fp.b03002001))*100).toFixed(2)",
+                    "type": "percent",
+                    "sum": "none"
+                },{
                     "FieldName": "Percent White, Non-Hispanic",
                     "Formula": "((fp.b03002003/fp.b03002001)*100).toFixed(2)",
                     "type": "percent",
@@ -133,6 +138,11 @@ module.exports = {
                     "type": "number",
                     "sum": "total"
                 }, {
+                    "FieldName": "People of Color",
+                    "Formula": "Number(fp.b03002001)-Number(fp.b03002003)",
+                    "type": "number",
+                    "sum": "total"
+                },{
                     "FieldName": "White, Non-Hispanic",
                     "Formula": "fp.b03002003",
                     "type": "number",
@@ -1091,23 +1101,49 @@ module.exports = {
                 "sum": "none"
             }]
         }, {
-            "ActualTable": "b25101",
+            "ActualTable": "b25091",
             "TableAlias": "Mortgage Status by Monthly Housing Costs as a Percentage of Household Income",
             "Summable": "no",
             "Type": "percent",
             "Data": [{
                 "FieldName": "Owner Occupied Households",
-                "Formula": "Number(fp.b25101001)",
+                "Formula": "Number(fp.b25091001)",
                 "type": "number",
                 "sum": "total"
             }, {
                 "FieldName": "With a Mortgage",
-                "Formula": "Number(fp.b25101002)",
+                "Formula": "Number(fp.b25091002)",
                 "type": "number",
                 "sum": "total"
             }, {
                 "FieldName": "Cost Burdened",
-                "Formula": "(((Number(fp.b25101006)+Number(fp.b25101010)+Number(fp.b25101014)+Number(fp.b25101018)+Number(fp.b25101022))/Number(fp.b25101002))*100).toFixed(2)",
+                "Formula": "(((Number(fp.b25091008)+Number(fp.b25091009)+Number(fp.b25091010)+Number(fp.b25091011))/Number(fp.b25091002))*100).toFixed(2)",
+                "type": "percent",
+                "sum": "none"
+            }, {
+                "FieldName": "Extremely Cost Burdened",
+                "Formula": "((Number(fp.b25091011)/Number(fp.b25091002))*100).toFixed(2)",
+                "type": "percent",
+                "sum": "none"
+            }]
+        }, {
+            "ActualTable": "b25070",
+            "TableAlias": "Gross Rent as a Percentage of Household Income",
+            "Summable": "no",
+            "Type": "percent",
+            "Data": [{
+                "FieldName": "Renter Occupied Households",
+                "Formula": "Number(fp.b25070001)",
+                "type": "number",
+                "sum": "total"
+            }, {
+                "FieldName": "Cost Burdened",
+                "Formula": "(((Number(fp.b25070007)+Number(fp.b25070008)+Number(fp.b25070009)+Number(fp.b25070010))/Number(fp.b25070001))*100).toFixed(2)",
+                "type": "percent",
+                "sum": "none"
+            }, {
+                "FieldName": "Extremely Cost Burdened",
+                "Formula": "((Number(fp.b25070010)/Number(fp.b25070001))*100).toFixed(2)",
                 "type": "percent",
                 "sum": "none"
             }]
