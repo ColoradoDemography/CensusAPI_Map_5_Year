@@ -108,7 +108,7 @@ module.exports = {
             "type": "percent",
             "minval": "0",
             "mininc": "0.01",
-            "usezeroasnull": "no",
+            "usezeroasnull": "yes",
             "favtable": "Race-Ethnicity (percent)",
             "favstyle": "jenks,7,mh8",
             "bg": "yes"
