@@ -21,7 +21,7 @@ module.exports = {
         {
             "varcode": "mhv",
             "verbose": "Median Home Value",
-            "section": "Housing",
+            "section": "Housing_Characteristics",
             "table": "b25077",
             "numerator": "fp.b25077001",
             "denominator": "1",
@@ -69,7 +69,7 @@ module.exports = {
         {
             "varcode": "myb",
             "verbose": "Median Year Housing Unit Built",
-            "section": "Housing",
+            "section": "Housing_Characteristics",
             "table": "b25035",
             "numerator": "fp.b25035001",
             "denominator": "1",
@@ -110,7 +110,7 @@ module.exports = {
             "mininc": "0.01",
             "usezeroasnull": "no",
             "favtable": "Race-Ethnicity (percent)",
-            "favstyle": "jenks,7,mh8",
+            "favstyle": "jenks,7,mh7",
             "bg": "yes"
         },
 
@@ -421,7 +421,7 @@ module.exports = {
         {
             "varcode": "housingun",
             "verbose": "Total Housing Units",
-            "section": "Housing",
+            "section": "Housing_Characteristics",
             "table": "b25002",
             "numerator": "Number(fp.b25002001)",
             "denominator": "1",
@@ -437,7 +437,7 @@ module.exports = {
         {
             "varcode": "occhu",
             "verbose": "Percent Occupied Housing Units",
-            "section": "Housing",
+            "section": "Housing_Characteristics",
             "table": "b25002",
             "numerator": "Number(fp.b25002002)",
             "denominator": "Number(fp.b25002001)",
@@ -453,7 +453,7 @@ module.exports = {
         {
             "varcode": "vachu",
             "verbose": "Percent Vacant Housing Units",
-            "section": "Housing",
+            "section": "Housing_Characteristics",
             "table": "b25002",
             "numerator": "Number(fp.b25002003)",
             "denominator": "Number(fp.b25002001)",
@@ -469,7 +469,7 @@ module.exports = {
         {
             "varcode": "owned",
             "verbose": "Percent Owner Occupied Housing Units",
-            "section": "Housing",
+            "section": "Housing_Characteristics",
             "table": "b25003",
             "numerator": "Number(fp.b25003002)",
             "denominator": "Number(fp.b25003001)",
@@ -485,7 +485,7 @@ module.exports = {
         {
             "varcode": "rented",
             "verbose": "Percent Renter Occupied Housing Units",
-            "section": "Housing",
+            "section": "Housing_Characteristics",
             "table": "b25003",
             "numerator": "Number(fp.b25003003)",
             "denominator": "Number(fp.b25003001)",
@@ -549,7 +549,7 @@ module.exports = {
         {
             "varcode": "medcrent",
             "verbose": "Median Contract Rent",
-            "section": "Rent",
+            "section": "Housing_Costs",
             "table": "b25058",
             "numerator": "Number(fp.b25058001)",
             "denominator": "1",
@@ -565,7 +565,7 @@ module.exports = {
         {
             "varcode": "medgrent",
             "verbose": "Median Gross Rent",
-            "section": "Rent",
+            "section": "Housing_Costs",
             "table": "b25064",
             "numerator": "Number(fp.b25064001)",
             "denominator": "1",
@@ -853,7 +853,7 @@ module.exports = {
         {
             "varcode": "avghhsize",
             "verbose": "Average Household Size",
-            "section": "Housing",
+            "section": "Housing_Characteristics",
             "table": "b25010",
             "numerator": "Number(fp.b25010001)",
             "denominator": "1",
@@ -1061,7 +1061,7 @@ module.exports = {
         {
             "varcode": "realtaxes",
             "verbose": "Median Real Estate Taxes Paid",
-            "section": "Housing",
+            "section": "Housing_Costs",
             "table": "b25103",
             "numerator": "Number(fp.b25103001)",
             "denominator": "1",
@@ -1077,7 +1077,7 @@ module.exports = {
         {
             "varcode": "moc_wmc",
             "verbose": "Median Monthly Owner Costs (w Mortgage)",
-            "section": "Housing",
+            "section": "Housing_Costs",
             "table": "b25088",
             "numerator": "Number(fp.b25088002)",
             "denominator": "1",
@@ -1093,7 +1093,7 @@ module.exports = {
         {
             "varcode": "moc_nmc",
             "verbose": "Median Monthly Owner Costs (no Mortgage)",
-            "section": "Housing",
+            "section": "Housing_Costs",
             "table": "b25088",
             "numerator": "Number(fp.b25088003)",
             "denominator": "1",
@@ -1204,8 +1204,8 @@ module.exports = {
 
         {
             "varcode": "cbhm",
-            "verbose": "Cost Burdened Households (with a Mortgage)",
-            "section": "Housing",
+            "verbose": "Cost Burdened Households with a Mortgage (More than 30% of income spent on housing)",
+            "section": "Housing_Costs",
             "table": "b25101",
             "numerator": "Number(fp.b25101006)+Number(fp.b25101010)+Number(fp.b25101014)+Number(fp.b25101018)+Number(fp.b25101022)",
             "denominator": "Number(fp.b25101002)",
@@ -1219,8 +1219,8 @@ module.exports = {
         },
         {
             "varcode": "ecbhm",
-            "verbose": "Extremely Cost Burdened Households (with a Mortgage)",
-            "section": "Housing",
+            "verbose": "Extremely Cost Burdened Households with a Mortgage (More than 50% of income spent on housing)",
+            "section": "Housing_Costs",
             "table": "b25091",
             "numerator": "Number(fp.b25091011)",
             "denominator": "Number(fp.b25091002)",
@@ -1235,8 +1235,8 @@ module.exports = {
 
         {
             "varcode": "cbrh",
-            "verbose": "Cost Burdened Rental Households",
-            "section": "Housing",
+            "verbose": "Cost Burdened Rental Households (More than 30% of income spent on housing)",
+            "section": "Housing_Costs",
             "table": "b25070",
             "numerator": "Number(fp.b25070007)+Number(fp.b25070008)+Number(fp.b25070009)+Number(fp.b25070010)",
             "denominator": "Number(fp.b25070001)",
@@ -1250,8 +1250,8 @@ module.exports = {
         },
         {
             "varcode": "ecbrh",
-            "verbose": "Extremely Cost Burdened Rental Households",
-            "section": "Housing",
+            "verbose": "Extremely Cost Burdened Rental Households (More than 50% of income spent on housing)",
+            "section": "Housing_Costs",
             "table": "b25070",
             "numerator": "Number(fp.b25070010)",
             "denominator": "Number(fp.b25070001)",
