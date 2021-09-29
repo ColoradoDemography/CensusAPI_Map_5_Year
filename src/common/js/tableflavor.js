@@ -1111,6 +1111,16 @@ module.exports = {
                 "type": "number",
                 "sum": "total"
             }, {
+                "FieldName": "Cost Burdened",
+                "Formula": "(((Number(fp.b25091008)+Number(fp.b25091009)+Number(fp.b25091010)+Number(fp.b25091011)+Number(fp.b25091019)+Number(fp.b25091020)+Number(fp.b25091021)+Number(fp.b25091022))/Number(fp.b25091001))*100).toFixed(2)",
+                "type": "percent",
+                "sum": "none"
+            }, {
+                "FieldName": "Extremely Cost Burdened",
+                "Formula": "(((Number(fp.b25091011)+Number(fp.b25091022))/Number(fp.b25091001))*100).toFixed(2)",
+                "type": "percent",
+                "sum": "none"
+            }, {
                 "FieldName": "With a Mortgage",
                 "Formula": "Number(fp.b25091002)",
                 "type": "number",
@@ -1123,6 +1133,21 @@ module.exports = {
             }, {
                 "FieldName": "Extremely Cost Burdened",
                 "Formula": "((Number(fp.b25091011)/Number(fp.b25091002))*100).toFixed(2)",
+                "type": "percent",
+                "sum": "none"
+            }, {
+                "FieldName": "Without a Mortgage",
+                "Formula": "Number(fp.b25091013)",
+                "type": "number",
+                "sum": "total"
+            }, {
+                "FieldName": "Cost Burdened",
+                "Formula": "(((Number(fp.b25091019)+Number(fp.b25091020)+Number(fp.b25091021)+Number(fp.b25091022))/Number(fp.b25091013))*100).toFixed(2)",
+                "type": "percent",
+                "sum": "none"
+            }, {
+                "FieldName": "Extremely Cost Burdened",
+                "Formula": "((Number(fp.b25091022)/Number(fp.b25091013))*100).toFixed(2)",
                 "type": "percent",
                 "sum": "none"
             }]
