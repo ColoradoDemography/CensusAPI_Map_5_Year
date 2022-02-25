@@ -24,12 +24,14 @@
                 advdenominator = datatree.data[i].denominator;
             }
         }
+        console.log("https://gis.dola.colorado.gov/cmap/advsearch?advsumlev=" + cMap.params.s + "&advstate=" + advstate + "&advsign=" + advsign + "&advtext=" + advtext + "&advtable=" + advtable + "&advnumerator=" + encodeURIComponent(advnumerator) + "&advdenominator=" + encodeURIComponent(advdenominator));
 
         //send paramters found above to advsearch.php, where query will return a list of geonums that fit that qualification
         $.ajax({
             url: "https://gis.dola.colorado.gov/cmap/advsearch?advsumlev=" + cMap.params.s + "&advstate=" + advstate + "&advsign=" + advsign + "&advtext=" + advtext + "&advtable=" + advtable + "&advnumerator=" + encodeURIComponent(advnumerator) + "&advdenominator=" + encodeURIComponent(advdenominator),
             dataType: 'json',
             success: function(data) {
+                console.log(data);
                 selectgeonums(cMap, data);
             }
         });
