@@ -467,6 +467,22 @@ module.exports = {
         },
 
         {
+            "varcode": "svachu",
+            "verbose": "Percent Vacant Housing Units That Are Seasonal",
+            "section": "Housing_Characteristics",
+            "table": "b25004",
+            "numerator": "Number(fp.b25004006)",
+            "denominator": "Number(fp.b25004001)",
+            "type": "percent",
+            "minval": "0",
+            "mininc": "0.01",
+            "usezeroasnull": "no",
+            "favtable": "Occupancy (percent)",
+            "favstyle": "jenks,7,sh2",
+            "bg": "yes"
+        },
+
+        {
             "varcode": "owned",
             "verbose": "Percent Owner Occupied Housing Units",
             "section": "Housing_Characteristics",

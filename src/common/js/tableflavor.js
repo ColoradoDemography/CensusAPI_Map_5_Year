@@ -666,6 +666,92 @@ module.exports = {
                 "sum": "none"
             }]
         }, {
+            "ActualTable": "b25004",
+            "TableAlias": "Vacancy Status",
+            "Summable": "no",
+            "Type": "number",
+            "Data": [{
+                "FieldName": "Total Vacant Units",
+                "Formula": "fp.b25004001",
+                "type": "number",
+                "sum": "total"
+            }, {
+                "FieldName": "For Rent",
+                "Formula": "fp.b25004002",
+                "type": "number",
+                "sum": "total"
+            }, {
+                "FieldName": "Rented, Not Occupied",
+                "Formula": "fp.b25004003",
+                "type": "number",
+                "sum": "total"
+            }, {
+                "FieldName": "For Sale Only",
+                "Formula": "fp.b25004004",
+                "type": "number",
+                "sum": "total"
+            }, {
+                "FieldName": "Sold, Not Occupied",
+                "Formula": "fp.b25004005",
+                "type": "number",
+                "sum": "total"
+            }, {
+                "FieldName": "Seasonal",
+                "Formula": "fp.b25004006",
+                "type": "number",
+                "sum": "total"
+            },{
+                "FieldName": "For Migrant Workers",
+                "Formula": "fp.b25004007",
+                "type": "number",
+                "sum": "total"
+            }, {
+                "FieldName": "Other Vacant",
+                "Formula": "fp.b25004008",
+                "type": "number",
+                "sum": "total"
+            },{
+                "FieldName": "Total Vacant Units (moe)",
+                "Formula": "fp.b25004_moe001",
+                "type": "number",
+                "sum": "total"
+            }, {
+                "FieldName": "For Rent (moe)",
+                "Formula": "fp.b25004_moe002",
+                "type": "number",
+                "sum": "total"
+            }, {
+                "FieldName": "Rented, Not Occupied (moe)",
+                "Formula": "fp.b25004_moe003",
+                "type": "number",
+                "sum": "total"
+            }, {
+                "FieldName": "For Sale Only (moe)",
+                "Formula": "fp.b25004_moe004",
+                "type": "number",
+                "sum": "total"
+            }, {
+                "FieldName": "Sold, Not Occupied (moe)",
+                "Formula": "fp.b25004_moe005",
+                "type": "number",
+                "sum": "total"
+            }, {
+                "FieldName": "Seasonal (moe)",
+                "Formula": "fp.b25004_moe006",
+                "type": "number",
+                "sum": "total"
+            },{
+                "FieldName": "For Migrant Workers (moe)",
+                "Formula": "fp.b25004_moe007",
+                "type": "number",
+                "sum": "total"
+            }, {
+                "FieldName": "Other Vacant (moe)",
+                "Formula": "fp.b25004_moe008",
+                "type": "number",
+                "sum": "total"
+            }]
+        },{
             "ActualTable": "b25058",
             "TableAlias": "Median Contract Rent",
             "Summable": "no",
