@@ -53,7 +53,12 @@ module.exports = function(cMap) {
         changeall(cMap, 'yes', '0');
     });
 
+    $('input[name=yearRadios]:radio').change(function() {
 
+        cMap.db = this.value;
+        updatequerysearchstring(cMap);
+        changeall(cMap, 'yes', '0');
+    });
 
     //change in classes dropdown
     $('#classes').change(function() {
