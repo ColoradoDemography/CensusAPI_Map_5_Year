@@ -1124,7 +1124,7 @@ module.exports = {
 
         {
             "varcode": "hhalone",
-            "verbose": "Pct of Nonfamily Households w Householder Living Alone",
+            "verbose": "Pct Nonfamily Households w Householder Living Alone",
             "section": "Household",
             "table": "b11001",
             "numerator": "Number(fp.b11001008)",
@@ -1140,7 +1140,7 @@ module.exports = {
 
         {
             "varcode": "hhnalone",
-            "verbose": "Pct of Nonfamily Households w Householder Not Living Alone",
+            "verbose": "Pct Nonfamily Households w Householder Not Living Alone",
             "section": "Household",
             "table": "b11001",
             "numerator": "Number(fp.b11001009)",
