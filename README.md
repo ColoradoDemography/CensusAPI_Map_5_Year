@@ -8,7 +8,7 @@ The Colorado State Demography Office's US Census Map
 A responsive census map with a [database backend](https://github.com/ColoradoDemography/MS_CensusMap).  Full-featured yet simple.  Covers the entire USA.
 ##Features
 ####Themes
- Map by over 65 characteristics (with more still being added)
+ Map by over 80 characteristics
 ####Data Tables
  Display attributes in a data table of all selected areas.  Sort by column.  Export to CSV.
 ####Charts
@@ -28,3 +28,7 @@ You can send a link of any map view to a friend.  They will see the map EXACTLY 
 There are a lot of technical details that need to be explained about how this program is organized.  See [Technical Notes](TechnicalNotes.md) for more information.
 
 To add more categories, add the necessary json records to the datatree and tableflavor js files
+
+##Modifications
+A year option has been added so that all available ACS years can be accessed inside the program.  
+At the national level, only state and county data is available.
