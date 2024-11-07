@@ -28,8 +28,28 @@ module.exports = function(cMap) {
         }
 
         //legend title
+        var dbyears;
+        
+        switch (cMap.db) {
+            case 'acs1822': dbyears = "2018-2022 ACS"; break;
+            case 'acs1721': dbyears = "2017-2021 ACS"; break;
+            case 'acs1620': dbyears = "2016-2020 ACS"; break;
+            case 'acs1519': dbyears = "2015-2019 ACS"; break;
+            case 'acs1418': dbyears = "2014-2018 ACS"; break;
+            case 'acs1317': dbyears = "2013-2017 ACS"; break;
+            case 'acs1216': dbyears = "2012-2016 ACS"; break;
+            case 'acs1115': dbyears = "2011-2015 ACS"; break;
+            case 'acs1014': dbyears = "2010-2014 ACS"; break;
+            case 'acs0913': dbyears = "2009-2013 ACS"; break;
+            case 'acs0812': dbyears = "2008-2012 ACS"; break;
+            case 'acs0711': dbyears = "2007-2011 ACS"; break;
+            case 'acs0610': dbyears = "2006-2019 ACS"; break;
+        }
+
         div = L.DomUtil.create('div', 'info legend');
-        div.innerHTML = "<h4 style='color: black;'><b>" + cMap.current_desc + "</b></h4>";
+        div.innerHTML = "<h4 style='color: black;'><b>" + cMap.current_desc + "</b></h4>" +
+        "<h4 style='color: black;'><b>" + dbyears + "</b></h4>"
+
 
         //retrieve breaks
         for (i = (cMap.breaks.length - 1); i > -1; i = i - 1) {

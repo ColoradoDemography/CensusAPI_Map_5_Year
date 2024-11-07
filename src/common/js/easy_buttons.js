@@ -32,7 +32,7 @@ module.exports = function(cMap) {
         });
         L.easyButton('fa fa-compass fa-lg', function() {
             $('#geoModal').modal('toggle');
-        }, 'Change Geography Level').addTo(cMap.map);
+        }, 'Change Geography Level and Years').addTo(cMap.map);
 
 
 
