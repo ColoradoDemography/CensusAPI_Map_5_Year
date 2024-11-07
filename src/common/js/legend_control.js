@@ -27,7 +27,7 @@ module.exports = function(cMap) {
             }
         }
 
-        //legend title
+        //map title
         var dbyears;
         
         switch (cMap.db) {
@@ -46,9 +46,13 @@ module.exports = function(cMap) {
             case 'acs0610': dbyears = "2006-2019 ACS"; break;
         }
 
+        $(document).ready(function(){
+                $('.navbar-brand').text(dbyears);
+        })
+
+        //legend title
         div = L.DomUtil.create('div', 'info legend');
-        div.innerHTML = "<h4 style='color: black;'><b>" + cMap.current_desc + "</b></h4>" +
-        "<h4 style='color: black;'><b>" + dbyears + "</b></h4>"
+        div.innerHTML = "<h4 style='color: black;'><b>" + cMap.current_desc + "</b></h4>"
 
 
         //retrieve breaks
