@@ -31,6 +31,7 @@ module.exports = function(cMap) {
         var dbyears;
         
         switch (cMap.db) {
+            case 'acs1923': dbyears = "2019-2023 ACS"; break;
             case 'acs1822': dbyears = "2018-2022 ACS"; break;
             case 'acs1721': dbyears = "2017-2021 ACS"; break;
             case 'acs1620': dbyears = "2016-2020 ACS"; break;
