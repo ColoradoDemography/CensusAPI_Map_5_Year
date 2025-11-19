@@ -15,7 +15,8 @@ module.exports = function(cMap) {
     
     $.ajax({
         dataType: "json",
-        url: "https://gis.dola.colorado.gov/munis/munis",
+        //url: "https://gis.dola.colorado.gov/munis/munis",
+        url: "https://storage.googleapis.com/co-publicdata/munibounds.geojson",
         success: function(data) {
             $(data.features).each(function(key, data) {
                 munibounds.addData(data);
