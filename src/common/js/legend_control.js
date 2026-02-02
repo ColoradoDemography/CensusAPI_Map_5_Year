@@ -31,6 +31,7 @@ module.exports = function(cMap) {
         var dbyears;
         
         switch (cMap.db) {
+            case 'acs2024': dbyears = "2020-2024 ACS"; break;
             case 'acs1923': dbyears = "2019-2023 ACS"; break;
             case 'acs1822': dbyears = "2018-2022 ACS"; break;
             case 'acs1721': dbyears = "2017-2021 ACS"; break;
@@ -41,10 +42,6 @@ module.exports = function(cMap) {
             case 'acs1216': dbyears = "2012-2016 ACS"; break;
             case 'acs1115': dbyears = "2011-2015 ACS"; break;
             case 'acs1014': dbyears = "2010-2014 ACS"; break;
-            case 'acs0913': dbyears = "2009-2013 ACS"; break;
-            case 'acs0812': dbyears = "2008-2012 ACS"; break;
-            case 'acs0711': dbyears = "2007-2011 ACS"; break;
-            case 'acs0610': dbyears = "2006-2019 ACS"; break;
         }
 
         $(document).ready(function(){
